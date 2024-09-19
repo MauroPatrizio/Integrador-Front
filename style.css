@@ -45,7 +45,7 @@
   background-color: transparent;
   border-radius: 0.4rem;
   padding: 0.4rem;
-  width: 5vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -82,7 +82,8 @@
 
 .container__view{
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
+  grid-template-columns: 25% 75%;
+  width: 100%;
 }
 
 .listAside{
@@ -285,7 +286,65 @@
 
 /* media querys */
 
-@media screen and (min-width: 1280px) {
+/*===Menos de 400px=== */
+
+/* @media screen and (max-width: 400px) {
+
+  .container__view{
+    grid-template-columns: 0% 100%;
+  }
+  
+  .containerProductStore{
+    grid-template-columns: repeat(2, 0.6fr);
+  }
+  
+  .containerTargetItem{
+    width: 25vw;
+  }
+
+  
+} */
+
+/* ===400px===  */
+
+@media screen and (max-width: 768px) {
+
+  .container__view{
+    grid-template-columns: 0% 100%;
+  }
+  
+  .containerProductStore{
+    grid-template-columns: repeat(2, 0.6fr);
+  }
+  
+  .containerTargetItem{
+    width: 25vw;
+  }
+}
+
+/* ===SCROLLBAR=== */
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+/* ===768px=== */
+
+@media screen and (min-width: 768px) {
+
+.containerProductStore{
+  grid-template-columns: repeat(3, 0.6fr);
+}
+
+/* ===SCROLLBAR=== */
+::-webkit-scrollbar{
+  display: inherit;
+}
+
+
+/* ===1280px===  */
+
+@media screen and (min-width: 1024px) {
   
   .containerProductStore{
     grid-template-columns: repeat(4, 0.6fr);
@@ -297,6 +356,7 @@
 
 }
 
+}
 
 /* ===SCROLLBAR=== */
 ::-webkit-scrollbar{
@@ -313,4 +373,3 @@
 ::-webkit-scrollbar-thumb:hover{
   background-color: #6989b8;
 }
-
