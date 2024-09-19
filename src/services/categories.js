@@ -13,6 +13,7 @@ const handleFilterProductsByCategory = (categoryIn)=>{
             break;
         case "Todo":
             handleRenderList(products);
+            break;
         case "Hamburguesas":
         case "Papas":
         case "Gaseosas":
